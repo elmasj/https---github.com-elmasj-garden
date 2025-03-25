@@ -3,13 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Highlight Areas</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Image Overlay App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    button, input {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-  <video id="camera" autoplay></video>
-  <canvas id="overlay"></canvas>
-  <button id="save">Save Highlighted Image</button>
-  <script src="script.js"></script>
+  <h1>Image Overlay App</h1>
+
+  <!-- Step 1: Upload Buttons -->
+  <input type="file" id="upload1" accept="image/*">
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <input type="file" id="upload2" accept="image/*">
+  <button id="applyOverlay">Apply Second Image</button>
+
+  <script src="app.js"></script>
 </body>
 </html>
